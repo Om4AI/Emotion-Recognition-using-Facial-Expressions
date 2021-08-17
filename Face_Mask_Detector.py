@@ -52,7 +52,8 @@ right.image(image, caption="Uploaded Image")
 data = image.read()
 
 image = Image.open(io.BytesIO(data))
-image.save("Face_Mask.jpeg")
+# image.save("Face_Mask.jpeg")
+image.save("https://drive.google.com/drive/folders/13z9BZb2rzJuZZkec3oLwqspgMmvnFe6o?usp=sharing/Test.jpeg")
 
 left.success("Face Mask Detected")
 left.error("No Face Mask")
