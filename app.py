@@ -75,7 +75,7 @@ if (img):x = skimg.resize(x, (160,160,3))
 # img = image.load_img(path, target_size =(160,160))
 
  # Convert the image into array
-x = np.expand_dims(x, axis=0) # Expand the images as if they were many images
+if (img) : x = np.expand_dims(x, axis=0) # Expand the images as if they were many images
 
 images = np.vstack([x]) # Important
 classes = model.predict(images, batch_size=10) 
