@@ -74,6 +74,7 @@ if (img):x = skimg.resize(x, (160,160,3))
 
 # img = image.load_img(path, target_size =(160,160))
 
+res= ""
  # Convert the image into array
 if (img) :
     x = np.expand_dims(x, axis=0) # Expand the images as if they were many images
