@@ -75,13 +75,13 @@ if (img):x = skimg.resize(x, (160,160,3))
 # img = image.load_img(path, target_size =(160,160))
 
  # Convert the image into array
-if (img) : x = np.expand_dims(x, axis=0) # Expand the images as if they were many images
+if (img) :
+    x = np.expand_dims(x, axis=0) # Expand the images as if they were many images
+    images = np.vstack([x]) # Important
+    classes = model.predict(images, batch_size=10) 
+    score = tf.nn.softmax(classes[0]) 
 
-images = np.vstack([x]) # Important
-classes = model.predict(images, batch_size=10) 
-score = tf.nn.softmax(classes[0]) 
-
-res = class_names[np.argmax(score)]
+    res = class_names[np.argmax(score)]
 # --------------------------------------
 
 # Output here
