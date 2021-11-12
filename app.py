@@ -1,5 +1,5 @@
 import streamlit as st
-import cv2
+# import cv2
 import streamlit.components.v1 as comp
 import webbrowser
 import warnings
@@ -145,13 +145,13 @@ if st.sidebar.button('References'):
 # Get Camera
 
 # run = right.button("Open Camera")  # Assign it to right side
-cam = cv2.VideoCapture(0)
+# cam = cv2.VideoCapture(0)
 turn_on = right.button("TURN ON CAMERA")
-FRAME_WINDOW = right.image([])
-while turn_on:
-    ret, frame = cam.read()
-    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    FRAME_WINDOW.image(frame)
+# FRAME_WINDOW = right.image([])
+# while turn_on:
+#     ret, frame = cam.read()
+#     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+#     FRAME_WINDOW.image(frame)
     
 # Turn Off camera
 off = right.button("TURN OFF CAMERA")
