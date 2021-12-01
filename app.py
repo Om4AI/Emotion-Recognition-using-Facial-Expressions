@@ -1,5 +1,5 @@
 import streamlit as st
-import cv2
+# import cv2
 import streamlit.components.v1 as comp
 import webbrowser
 import warnings
@@ -36,7 +36,7 @@ st.set_page_config(
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Title & Headers
-st.title("Emotion Detector")
+st.title("🎭Emotion Detector")
 
 st.subheader("AI based Emotion Detector\n\n\tMake a prediction using TensorFlow & Keras")
 st.markdown("***")
@@ -74,14 +74,15 @@ if (img):x = skimg.resize(x, (160,160,3))
 
 # img = image.load_img(path, target_size =(160,160))
 
+res= ""
  # Convert the image into array
-x = np.expand_dims(x, axis=0) # Expand the images as if they were many images
+if (img) :
+    x = np.expand_dims(x, axis=0) # Expand the images as if they were many images
+    images = np.vstack([x]) # Important
+    classes = model.predict(images, batch_size=10) 
+    score = tf.nn.softmax(classes[0]) 
 
-images = np.vstack([x]) # Important
-classes = model.predict(images, batch_size=10) 
-score = tf.nn.softmax(classes[0]) 
-
-res = class_names[np.argmax(score)]
+    res = class_names[np.argmax(score)]
 # --------------------------------------
 
 # Output here
@@ -145,13 +146,13 @@ if st.sidebar.button('References'):
 # Get Camera
 
 # run = right.button("Open Camera")  # Assign it to right side
-cam = cv2.VideoCapture(0)
+# cam = cv2.VideoCapture(0)
 turn_on = right.button("TURN ON CAMERA")
-FRAME_WINDOW = right.image([])
-while turn_on:
-    ret, frame = cam.read()
-    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    FRAME_WINDOW.image(frame)
+# FRAME_WINDOW = right.image([])
+# while turn_on:
+#     ret, frame = cam.read()
+#     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+#     FRAME_WINDOW.image(frame)
     
 # Turn Off camera
 off = right.button("TURN OFF CAMERA")
