@@ -8,4 +8,4 @@ Emotions classification from the facial expressions of people
 </p>
  -->
 
-<img src="WebApp Interface/emo 1.1.png" width="481"/> <img src="WebApp Interface/emo 1.2.png" width="481"/> 
+<img src="WebApp Interface/emolive 1.1.png" width="425"/> <img src="WebApp Interface/emo 1.2.png" width="425"/> 
