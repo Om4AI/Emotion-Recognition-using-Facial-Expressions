@@ -11,7 +11,7 @@
 _The **Home Screen** of the WebApp shows the various options that are available in the webapp._
 
 <br><br>
-### Static Emotion predictions: 
+### Static Images Emotion predictions: 
 ![image](https://user-images.githubusercontent.com/70912643/144306237-57ec51e1-2531-4c94-8383-4944647bc58c.png)
 
 
