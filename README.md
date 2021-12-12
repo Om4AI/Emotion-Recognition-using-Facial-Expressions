@@ -1,7 +1,21 @@
 # Emotion-Recognition-using-Facial-Expressions
-## _Emotions classification from the facial expressions of people. Analyzing various emotions from dataset of faces with different emotions._
+### _Emotions classification from the facial expressions of people. Analyzing various emotions from dataset of faces with different emotions._
 <br>
 
+<h2>Platforms & Technologies:</h2>
+<ul>
+ <li>Python</li>
+ <li>Google Colab</li>
+ <li>Kaggle Datasets & Notebooks</li>
+ <li>TensorFlow</li>
+ <li>Keras</li>
+ <li>Seaborn & Matplotlib</li>
+ <li>OpenCV</li>
+ <li>Streamlit</li>
+</ul>
+
+
+<br><br>
 ## WebApp Interface:
 
 ### Home Screen: 
